@@ -304,6 +304,8 @@ static int __mmapdealloc(void * ptr, size_t size){
     return dealloc;
 }
 
+#ifdef ENABLE_SBRK_DEALLOC
+
 static int __sbrkdealloc(size_t size){
     if (size==0) return -1;
     pthread_mutex_lock(&lock);
@@ -317,6 +319,8 @@ static int __sbrkdealloc(size_t size){
     pthread_mutex_unlock(&lock);
     return 0;
 }
+
+#endif
 
 static int __mremap_extend(void * ptr, size_t size, size_t extension){
 

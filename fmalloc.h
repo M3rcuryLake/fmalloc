@@ -1,7 +1,5 @@
 #include <stddef.h>
 
-#define DEBUG
-
 void *fcalloc(size_t nmemb, size_t size);
 void *fmalloc(size_t size);
 void ffree(void *ptr);
