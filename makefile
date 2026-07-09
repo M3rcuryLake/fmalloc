@@ -6,4 +6,4 @@ CFLAGS=-std=gnu11 -Wall -Wextra -g
 LDFLAGS=-pthread
 
 prod: $(SRC) fmalloc.c
-	$(CC) $(DEFINES) $(CFLAGS) $(SRC) fmalloc.c -o $(OUT) $(LDFLAGS)
+	$(CC) $(DEFINES) $(CFLAGS) $(SRC) fmalloc.c -o ./dist/$(OUT) $(LDFLAGS)

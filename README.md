@@ -206,11 +206,11 @@ Just move `fmalloc.c` and `makefile` to your project directory and run the follo
 make SRC=test.c OUT=test
 # this does test.c + fmalloc.c -> test
 
-./test
+./dist/test
 
 # If you just want to check my code
 make
-./main
+./dist/main
 ```
 If you want to check the `arenas` and the `cache bins` in your code, just call the `print_arenas()` function, it will cause a SIGILL (Illegal intstuction error) to quit the execution once encountered, but will print all the arenas in an orderly fashion. If still not happy, I suggest using `pwndbg` and examining `current_ar_ptr` and `cache` manually. 
 
