@@ -247,7 +247,8 @@ static void alloc_printerr(const char* func, const char* message){
     {
         print_arenas();
 
-        #ifdef HALT_ON_CORRUPTION{
+        #ifdef HALT_ON_CORRUPTION
+        {
             __builtin_trap();
         }
 
